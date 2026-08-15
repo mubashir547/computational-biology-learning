@@ -1,4 +1,4 @@
-
+import sys
 
 def read_fasta(filename):
     sequences = {}
@@ -73,8 +73,11 @@ def analyze_sequences(sequences):
     print("Highest GC sequence:", highest_gc_id)
     print("Highest GC Content:", round(highest_gc, 2), "%")
 
+if len(sys.argv) != 2:
+    print("Usage: py fasta_analyzer.py <fasta_file>")
+    sys.exit(1)
 
-filename = "python/bioinformatics/example.fasta"
+filename = sys.argv[1]
 
 sequences = read_fasta(filename)
 
