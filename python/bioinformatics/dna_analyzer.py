@@ -1,14 +1,50 @@
-sequence = "ATGCGATCGATCGATCGCGCTA"
+sequence = input("Enter a DNA sequence: ")
 
-print("DNA Sequence:", sequence)
-print("Sequence Length:", len(sequence))
+sequence = sequence.replace(" ", "").replace("\n", "").upper()
 
-print("A:", sequence.count("A"))
-print("T:", sequence.count("T"))
-print("G:", sequence.count("G"))
-print("C:", sequence.count("C"))
+valid_bases = "ATGC"
 
-gc_count = sequence.count("G") + sequence.count("C")
-gc_content = (gc_count / len(sequence)) * 100
+if not sequence:
+    print("Error: DNA sequence cannot be empty.")
 
-print("GC Content:", round(gc_content, 2), "%")
+elif not all(base in valid_bases for base in sequence):
+    print("Error: Invalid DNA sequence.")
+    print("Only A, T, G, and C are allowed.")
+
+else:
+    length = len(sequence)
+
+    a_count = sequence.count("A")
+    t_count = sequence.count("T")
+    g_count = sequence.count("G")
+    c_count = sequence.count("C")
+
+    gc_count = g_count + c_count
+    at_count = a_count + t_count
+
+    gc_content = (gc_count / length) * 100
+    at_content = (at_count / length) * 100
+
+    complement_table = str.maketrans("ATGC", "TACG")
+    complement = sequence.translate(complement_table)
+    reverse_complement = complement[::-1]
+
+    print("\n========== DNA ANALYSIS ==========")
+    print("DNA Sequence:", sequence)
+    print("Sequence Length:", length)
+
+    print("\nNucleotide Counts:")
+    print("A:", a_count)
+    print("T:", t_count)
+    print("G:", g_count)
+    print("C:", c_count)
+
+    print("\nComposition:")
+    print("GC Content:", round(gc_content, 2), "%")
+    print("AT Content:", round(at_content, 2), "%")
+
+    print("\nSequence Information:")
+    print("Complement:", complement)
+    print("Reverse Complement:", reverse_complement)
+
+    print("\n===================================")
