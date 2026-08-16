@@ -1,0 +1,15 @@
+===== MD TRAJECTORY ANALYSIS REPORT =====
+
+Trajectory length: 200 ns
+Total frames: 25
+Equilibration cutoff: 60 ns
+Post-equilibration frames: 15
+Post-equilibration RMSD mean: 2.688 Å
+Post-equilibration RMSD SD: 0.024 Å
+First multi-parameter stable window: 90 ns
+Stable windows: 12
+
+Final frame:
+RMSD: 2.73 Å
+Radius of gyration: 32.71 Å
+Hydrogen bonds: 497
