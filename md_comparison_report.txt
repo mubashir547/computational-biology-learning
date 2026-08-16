@@ -1,0 +1,26 @@
+===== MD COMPLEX COMPARISON REPORT =====
+
+Systems analyzed: S1, S2, S3
+
+Mean RMSD:
+S1: 6.80 Å
+S2: 8.20 Å
+S3: 5.50 Å
+
+Mean Radius of Gyration:
+S1: 32.50 Å
+S2: 31.20 Å
+S3: 33.80 Å
+
+Mean Hydrogen Bonds:
+S1: 470
+S2: 495
+S3: 450
+
+MMPBSA Binding Energy:
+S1: -61.00 kcal/mol
+S2: -178.00 kcal/mol
+S3: -223.00 kcal/mol
+
+Strongest predicted binding:
+S3: -223.00 kcal/mol
