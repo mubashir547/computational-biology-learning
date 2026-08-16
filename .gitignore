@@ -1,0 +1,7 @@
+# Python
+__pycache__/
+*.pyc
+
+# Generated MD analysis outputs
+rmsd_plot.png
+rmsd_results.txt
