@@ -1,0 +1,33 @@
+============================================================
+        MD CORRELATION ANALYSIS REPORT
+============================================================
+
+DATASET
+------------------------------------------------------------
+Frames analyzed: 21
+Trajectory duration: 200 ns
+
+PEARSON CORRELATION MATRIX
+------------------------------------------------------------
+        rmsd_A   rg_A  hbonds
+rmsd_A   1.000  0.912   0.940
+rg_A     0.912  1.000   0.984
+hbonds   0.940  0.984   1.000
+
+PAIRWISE INTERPRETATION
+------------------------------------------------------------
+RMSD vs Radius of Gyration
+Pearson r: 0.912
+Interpretation: very strong positive correlation
+
+RMSD vs Hydrogen Bonds
+Pearson r: 0.940
+Interpretation: very strong positive correlation
+
+Radius of Gyration vs Hydrogen Bonds
+Pearson r: 0.984
+Interpretation: very strong positive correlation
+
+SCIENTIFIC NOTE
+------------------------------------------------------------
+Correlation analysis describes linear association between MD observables. Correlation does not establish causation. The observed relationships should therefore be interpreted together with trajectory stability, structural analysis, hydrogen-bond analysis, RMSF, and other mechanistic evidence.
