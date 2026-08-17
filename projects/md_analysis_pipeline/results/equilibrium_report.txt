@@ -1,0 +1,10 @@
+===== MD EQUILIBRATION REPORT =====
+
+Trajectory length: 200 ns
+Total frames: 21
+Rolling window: 5 frames
+Stability threshold: 0.02 Å
+First stable region: 150 ns
+Stable windows: 6
+Post-equilibration RMSD mean: 2.710 Å
+Post-equilibration RMSD SD: 0.014 Å
