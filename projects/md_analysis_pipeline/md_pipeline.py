@@ -1,18 +1,54 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
+import argparse
+import subprocess
+import sys
+
+
+# ==============================
+# COMMAND-LINE ARGUMENTS
+# ==============================
+
+parser = argparse.ArgumentParser(
+    description="Automated Molecular Dynamics Analysis Pipeline"
+)
+
+parser.add_argument(
+    "--input",
+    default="input",
+    help="Directory containing MD CSV files"
+)
+
+parser.add_argument(
+    "--output",
+    default="results",
+    help="Directory where analysis results will be saved"
+)
+
+args = parser.parse_args()
 
 
 # ==============================
 # PROJECT DIRECTORIES
 # ==============================
 
-PROJECT_DIR = Path(
-    "projects/md_analysis_pipeline"
-)
+PROJECT_DIR = Path(__file__).resolve().parent
 
-INPUT_DIR = PROJECT_DIR / "input"
-RESULTS_DIR = PROJECT_DIR / "results"
+INPUT_DIR = Path(args.input)
+
+if not INPUT_DIR.is_absolute():
+    INPUT_DIR = PROJECT_DIR / INPUT_DIR
+
+RESULTS_DIR = Path(args.output)
+
+if not RESULTS_DIR.is_absolute():
+    RESULTS_DIR = PROJECT_DIR / RESULTS_DIR
+
+RESULTS_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
 RESULTS_DIR.mkdir(
     parents=True,

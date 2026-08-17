@@ -1,0 +1,4 @@
+===== AUTOMATED MD ANALYSIS REPORT =====
+
+Input files analyzed: 0
+

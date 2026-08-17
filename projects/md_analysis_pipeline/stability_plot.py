@@ -2,9 +2,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-PROJECT_DIR = Path("projects/md_analysis_pipeline")
+PROJECT_DIR = Path(__file__).resolve().parent
 
 RESULTS_DIR = PROJECT_DIR / "results"
+
+RESULTS_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
 data = pd.read_csv(
     RESULTS_DIR / "stability_analysis.csv"

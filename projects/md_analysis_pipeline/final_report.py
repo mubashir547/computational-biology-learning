@@ -1,9 +1,14 @@
 import pandas as pd
 from pathlib import Path
 
-PROJECT_DIR = Path("projects/md_analysis_pipeline")
+PROJECT_DIR = Path(__file__).resolve().parent
+
 RESULTS_DIR = PROJECT_DIR / "results"
 
+RESULTS_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
 summary_file = RESULTS_DIR / "summary.csv"
 stability_file = RESULTS_DIR / "stability_analysis.csv"
 

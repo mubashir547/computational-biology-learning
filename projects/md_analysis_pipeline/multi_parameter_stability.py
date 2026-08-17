@@ -5,18 +5,10 @@ from pathlib import Path
 # ==============================
 # PROJECT PATHS
 # ==============================
+PROJECT_DIR = Path(__file__).resolve().parent
 
-PROJECT_DIR = Path(
-    "projects/md_analysis_pipeline"
-)
-
-INPUT_DIR = (
-    PROJECT_DIR / "input"
-)
-
-RESULTS_DIR = (
-    PROJECT_DIR / "results"
-)
+INPUT_DIR = PROJECT_DIR / "input"
+RESULTS_DIR = PROJECT_DIR / "results"
 
 RESULTS_DIR.mkdir(
     parents=True,
