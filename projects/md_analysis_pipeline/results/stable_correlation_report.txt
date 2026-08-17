@@ -1,0 +1,33 @@
+============================================================
+        EQUILIBRATED MD CORRELATION ANALYSIS
+============================================================
+
+STABLE REGION
+------------------------------------------------------------
+Frames analyzed: 6
+Time range: 150–200 ns
+
+PEARSON CORRELATION MATRIX
+------------------------------------------------------------
+        rmsd_A   rg_A  hbonds
+rmsd_A   1.000  0.539   0.316
+rg_A     0.539  1.000  -0.213
+hbonds   0.316 -0.213   1.000
+
+PAIRWISE INTERPRETATION
+------------------------------------------------------------
+RMSD vs Radius of Gyration
+Pearson r: 0.539
+Interpretation: moderate positive correlation
+
+RMSD vs Hydrogen Bonds
+Pearson r: 0.316
+Interpretation: weak positive correlation
+
+Radius of Gyration vs Hydrogen Bonds
+Pearson r: -0.213
+Interpretation: very weak negative correlation
+
+SCIENTIFIC NOTE
+------------------------------------------------------------
+Correlation describes linear association between MD observables and does not establish causation. Because the analysis is restricted to the equilibrated region, these relationships are less likely to reflect the initial structural adaptation phase. Nevertheless, correlation should be interpreted together with RMSD, Rg, hydrogen-bond, RMSF, and structural analyses.
