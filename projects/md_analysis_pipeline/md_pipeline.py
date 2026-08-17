@@ -287,3 +287,99 @@ print(
 print(
     f"Results directory: {RESULTS_DIR}"
 )
+
+# ==============================
+# ADVANCED MD ANALYSIS
+# ==============================
+
+import subprocess
+import sys
+
+
+def run_module(script_name):
+    """Run an additional analysis module."""
+
+    script_path = PROJECT_DIR / script_name
+
+    if not script_path.exists():
+        print(
+            f"\nWARNING: {script_name} not found."
+        )
+        return False
+
+    print("\n================================")
+    print(f" RUNNING: {script_name}")
+    print("================================")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(script_path)
+        ],
+        check=False
+    )
+
+    if result.returncode != 0:
+        print(
+            f"WARNING: {script_name} "
+            f"returned exit code "
+            f"{result.returncode}"
+        )
+        return False
+
+    print(
+        f"{script_name} completed successfully."
+    )
+
+    return True
+
+
+# ==============================
+# EQUILIBRATION ANALYSIS
+# ==============================
+
+run_module(
+    "equilibrium_detector.py"
+)
+
+
+# ==============================
+# MULTI-PARAMETER STABILITY
+# ==============================
+
+run_module(
+    "multi_parameter_stability.py"
+)
+
+
+# ==============================
+# STABILITY VISUALIZATION
+# ==============================
+
+run_module(
+    "stability_plot.py"
+)
+
+
+# ==============================
+# FINAL REPORT
+# ==============================
+
+run_module(
+    "final_report.py"
+)
+
+
+# ==============================
+# FINAL PIPELINE MESSAGE
+# ==============================
+
+print("\n================================")
+print(" COMPLETE MD ANALYSIS FINISHED")
+print("================================")
+
+print(
+    f"\nAll results are available in:"
+)
+
+print(RESULTS_DIR)
