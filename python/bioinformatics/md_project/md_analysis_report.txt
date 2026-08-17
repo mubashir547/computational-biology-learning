@@ -1,0 +1,32 @@
+===== MD ANALYSIS REPORT =====
+
+Parameters analyzed: 4
+
+hbonds
+Frames: 21
+Mean: 482.238
+Minimum: 420.000
+Maximum: 497.000
+Standard deviation: 21.929
+
+rg_A
+Frames: 21
+Mean: 32.614
+Minimum: 32.100
+Maximum: 32.720
+Standard deviation: 0.166
+
+rmsd_A
+Frames: 21
+Mean: 2.526
+Minimum: 1.820
+Maximum: 2.730
+Standard deviation: 0.231
+
+rmsf_A
+Frames: 21
+Mean: 1.485
+Minimum: 1.200
+Maximum: 1.600
+Standard deviation: 0.083
+

@@ -1,0 +1,15 @@
+===== COMPLEX COMPARISON REPORT =====
+
+Systems analyzed: 3
+
+Lowest RMSD:
+S3 (5.50 Å)
+
+Lowest Radius of Gyration:
+S2 (31.20 Å)
+
+Highest Hydrogen Bonds:
+S2 (495)
+
+Most Negative MMPBSA:
+S3 (-223.00 kcal/mol)
