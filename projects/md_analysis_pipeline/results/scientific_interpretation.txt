@@ -1,0 +1,72 @@
+============================================================
+        SCIENTIFIC INTERPRETATION OF MD TRAJECTORY
+============================================================
+
+
+DATASET OVERVIEW
+------------------------------------------------------------
+Trajectory frames: 21
+Trajectory duration: 200 ns
+
+
+WHOLE-TRAJECTORY STATISTICS
+------------------------------------------------------------
+
+RMSD: 2.526 ± 0.231 Å
+
+Radius of gyration: 32.614 ± 0.166 Å
+
+Hydrogen bonds: 482.238 ± 21.929
+
+RMSF: 1.485 ± 0.083 Å
+
+
+Interpretation: The whole trajectory includes both the initial structural adaptation phase and the later equilibrated region. Therefore, whole-trajectory fluctuations should not be interpreted alone as evidence of persistent instability.
+
+
+EQUILIBRATED / STABLE REGION
+------------------------------------------------------------
+
+Stable region: 150–200 ns
+
+Stable duration: 50 ns
+
+Stable frames: 6
+
+
+RMSD
+Mean: 2.710 Å
+SD: 0.014 Å
+Interpretation: The stable region shows very low RMSD fluctuation, supporting a stable conformational state.
+
+
+Radius of Gyration
+Mean: 32.695 Å
+SD: 0.010 Å
+Interpretation: The stable region demonstrates minimal variation in molecular compactness.
+
+
+Hydrogen Bonds
+Mean: 496.000
+SD: 0.894
+Interpretation: The stable region shows a highly stable hydrogen-bond interaction network.
+
+
+STABILITY SYNTHESIS
+------------------------------------------------------------
+RMSD, radius of gyration, and hydrogen-bond behavior simultaneously satisfy the predefined stability criteria during the detected stable region. This supports the presence of a stable conformational regime during the latter portion of the trajectory.
+
+
+RMSF FLEXIBILITY
+------------------------------------------------------------
+
+Mean RMSF: 1.485 Å
+Minimum RMSF: 1.200 Å
+Maximum RMSF: 1.600 Å
+Interpretation: RMSF provides information about residue-level flexibility and should be examined together with the residue-wise RMSF profile to identify highly mobile regions.
+
+
+FINAL SCIENTIFIC CONCLUSION
+------------------------------------------------------------
+
+The MD trajectory exhibits an initial structural adaptation phase followed by a stable conformational regime from approximately 150 to 200 ns. During this region, RMSD fluctuation remains low, the radius of gyration remains stable, and the hydrogen-bond network shows minimal variation. Collectively, these observations support structural stabilization of the simulated system during the latter portion of the trajectory.
