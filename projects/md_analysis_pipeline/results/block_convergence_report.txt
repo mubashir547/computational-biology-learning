@@ -1,0 +1,56 @@
+============================================================
+        BLOCK-SIZE CONVERGENCE ANALYSIS
+============================================================
+
+PURPOSE
+------------------------------------------------------------
+Block-size sensitivity was evaluated to determine how uncertainty estimates change as increasingly large groups of temporally correlated MD frames are averaged together.
+
+METHOD
+------------------------------------------------------------
+Multiple block sizes were evaluated independently. For each block size, complete blocks were constructed, block means were calculated, and the standard error of the block means was estimated.
+
+RESULTS
+------------------------------------------------------------
+
+rmsd_A
+Block size: 2 frames | Blocks: 10 | Discarded: 1 | Block SEM: 0.07247
+Block size: 3 frames | Blocks: 7 | Discarded: 0 | Block SEM: 0.08544
+Block size: 4 frames | Blocks: 5 | Discarded: 1 | Block SEM: 0.09814
+Block size: 5 frames | Blocks: 4 | Discarded: 1 | Block SEM: 0.11141
+Block size: 6 frames | Blocks: 3 | Discarded: 3 | Block SEM: 0.12316
+Block size: 7 frames | Blocks: 3 | Discarded: 0 | Block SEM: 0.12313
+Block size: 8 frames | Blocks: 2 | Discarded: 5 | Block SEM: 0.16688
+Block size: 9 frames | Blocks: 2 | Discarded: 3 | Block SEM: 0.17333
+Block size: 10 frames | Blocks: 2 | Discarded: 1 | Block SEM: 0.17250
+
+rg_A
+Block size: 2 frames | Blocks: 10 | Discarded: 1 | Block SEM: 0.05321
+Block size: 3 frames | Blocks: 7 | Discarded: 0 | Block SEM: 0.06185
+Block size: 4 frames | Blocks: 5 | Discarded: 1 | Block SEM: 0.07223
+Block size: 5 frames | Blocks: 4 | Discarded: 1 | Block SEM: 0.07666
+Block size: 6 frames | Blocks: 3 | Discarded: 3 | Block SEM: 0.08361
+Block size: 7 frames | Blocks: 3 | Discarded: 0 | Block SEM: 0.07514
+Block size: 8 frames | Blocks: 2 | Discarded: 5 | Block SEM: 0.11063
+Block size: 9 frames | Blocks: 2 | Discarded: 3 | Block SEM: 0.09444
+Block size: 10 frames | Blocks: 2 | Discarded: 1 | Block SEM: 0.08350
+
+hbonds
+Block size: 2 frames | Blocks: 10 | Discarded: 1 | Block SEM: 7.07696
+Block size: 3 frames | Blocks: 7 | Discarded: 0 | Block SEM: 8.33419
+Block size: 4 frames | Blocks: 5 | Discarded: 1 | Block SEM: 10.05982
+Block size: 5 frames | Blocks: 4 | Discarded: 1 | Block SEM: 10.81804
+Block size: 6 frames | Blocks: 3 | Discarded: 3 | Block SEM: 12.00244
+Block size: 7 frames | Blocks: 3 | Discarded: 0 | Block SEM: 11.02882
+Block size: 8 frames | Blocks: 2 | Discarded: 5 | Block SEM: 15.62500
+Block size: 9 frames | Blocks: 2 | Discarded: 3 | Block SEM: 14.83333
+Block size: 10 frames | Blocks: 2 | Discarded: 1 | Block SEM: 13.40000
+
+
+SCIENTIFIC INTERPRETATION
+------------------------------------------------------------
+Block-size convergence provides a diagnostic for whether uncertainty estimates become stable as temporally correlated observations are grouped. Strong variation across block sizes indicates that the available trajectory may be too short to obtain a robust uncertainty estimate.
+
+LIMITATION
+------------------------------------------------------------
+Only 21 frames are currently available. Consequently, large block sizes produce very few independent blocks, and apparent convergence should not be interpreted as definitive evidence of statistical convergence. Longer trajectories with substantially more sampled frames are required for production-level uncertainty quantification.

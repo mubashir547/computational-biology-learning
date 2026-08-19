@@ -1,0 +1,56 @@
+============================================================
+        BLOCK AVERAGING UNCERTAINTY ANALYSIS
+============================================================
+
+PURPOSE
+------------------------------------------------------------
+Block averaging was used to estimate uncertainty while accounting for temporal correlation between neighboring MD trajectory frames.
+
+METHOD
+------------------------------------------------------------
+The trajectory was divided into approximately equal blocks. Means were calculated for each block, and the variability among block means was used to estimate a block-based standard error. Incomplete trailing frames were excluded from block calculations.
+
+RESULTS
+------------------------------------------------------------
+
+rmsd_A
+Frames: 21
+Block size: 4
+Number of blocks: 5
+Discarded trailing frames: 1
+Mean: 2.5257
+Standard deviation: 0.2311
+Naive SEM: 0.0504
+Block mean SD: 0.2194
+Block-based SEM: 0.0981
+
+rg_A
+Frames: 21
+Block size: 4
+Number of blocks: 5
+Discarded trailing frames: 1
+Mean: 32.6143
+Standard deviation: 0.1658
+Naive SEM: 0.0362
+Block mean SD: 0.1615
+Block-based SEM: 0.0722
+
+hbonds
+Frames: 21
+Block size: 4
+Number of blocks: 5
+Discarded trailing frames: 1
+Mean: 482.2381
+Standard deviation: 21.9292
+Naive SEM: 4.7853
+Block mean SD: 22.4944
+Block-based SEM: 10.0598
+
+
+SCIENTIFIC INTERPRETATION
+------------------------------------------------------------
+Frame-level standard errors assume that observations are independent. MD trajectory frames are commonly temporally correlated, so this assumption can lead to overconfident uncertainty estimates. Block averaging provides a simple diagnostic approach for evaluating how uncertainty changes when correlated frames are grouped together.
+
+LIMITATION
+------------------------------------------------------------
+The present demonstration trajectory contains only a small number of frames. Consequently, the number of available blocks is limited and block-based uncertainty estimates may themselves be unstable. For production MD studies, substantially longer trajectories with appropriately sampled frames are recommended.
