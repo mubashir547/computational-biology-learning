@@ -1,0 +1,27 @@
+===== MD ANALYSIS MANIFEST =====
+
+Generated: 2026-08-19T03:46:03.175603-07:00
+Git commit: c0d8317
+Git branch: main
+Git status: MODIFIED
+
+INPUT FILES
+input\hbonds.csv
+input\rg.csv
+input\rmsd.csv
+input\rmsf.csv
+
+ANALYSIS MODULES
+PASS: md_pipeline.py
+PASS: equilibrium_detector.py
+PASS: multi_parameter_stability.py
+PASS: stability_plot.py
+PASS: final_report.py
+PASS: scientific_interpretation.py
+PASS: correlation_analysis.py
+PASS: correlation_stable.py
+PASS: statistical_analysis.py
+PASS: effective_sample_size.py
+PASS: block_averaging.py
+PASS: block_convergence.py
+PASS: reproducibility_report.py

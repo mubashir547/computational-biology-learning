@@ -1,0 +1,89 @@
+============================================================
+        MD ANALYSIS REPRODUCIBILITY REPORT
+============================================================
+
+PROJECT
+------------------------------------------------------------
+Project: Automated MD Analysis Pipeline
+Analysis date: 2026-08-19T03:46:03.175603-07:00
+
+TRAJECTORY
+------------------------------------------------------------
+Frames: 21
+Duration: 200.0 ns
+
+SOFTWARE ENVIRONMENT
+------------------------------------------------------------
+Python: 3.13.15
+Pandas: 3.0.5
+NumPy: 2.5.2
+Matplotlib: 3.11.1
+Platform: Windows-11-10.0.22000-SP0
+
+VERSION CONTROL
+------------------------------------------------------------
+Branch: main
+Commit: c0d8317
+Working tree: MODIFIED
+
+INPUT FILES
+------------------------------------------------------------
+hbonds.csv | Rows: 21 | Columns: time_ns, hbonds
+rg.csv | Rows: 21 | Columns: time_ns, rg_A
+rmsd.csv | Rows: 21 | Columns: time_ns, rmsd_A
+rmsf.csv | Rows: 21 | Columns: time_ns, rmsf_A
+
+ANALYSIS MODULES
+------------------------------------------------------------
+[PASS] md_pipeline.py
+[PASS] equilibrium_detector.py
+[PASS] multi_parameter_stability.py
+[PASS] stability_plot.py
+[PASS] final_report.py
+[PASS] scientific_interpretation.py
+[PASS] correlation_analysis.py
+[PASS] correlation_stable.py
+[PASS] statistical_analysis.py
+[PASS] effective_sample_size.py
+[PASS] block_averaging.py
+[PASS] block_convergence.py
+[PASS] reproducibility_report.py
+
+OUTPUT FILES
+------------------------------------------------------------
+[PASS] autocorrelation.png
+[PASS] block_averaging.png
+[PASS] block_averaging_report.txt
+[PASS] block_convergence.csv
+[PASS] block_convergence.png
+[PASS] block_convergence_report.txt
+[PASS] block_statistics.csv
+[PASS] correlation_heatmap.png
+[PASS] correlation_matrix.csv
+[PASS] correlation_report.txt
+[PASS] effective_sample_size.csv
+[PASS] effective_sample_size_report.txt
+[PASS] equilibrium_analysis.csv
+[PASS] equilibrium_report.txt
+[PASS] final_md_report.txt
+[PASS] hbonds.png
+[PASS] multi_parameter_stability.png
+[PASS] report.txt
+[PASS] rg_A.png
+[PASS] rmsd_A.png
+[PASS] rmsd_equilibrium.png
+[PASS] rmsf_A.png
+[PASS] scientific_interpretation.txt
+[PASS] stability_analysis.csv
+[PASS] stability_report.txt
+[PASS] stable_correlation_matrix.csv
+[PASS] stable_correlation_report.txt
+[PASS] stable_region.csv
+[PASS] statistical_correlation_report.txt
+[PASS] statistical_correlations.csv
+[PASS] summary.csv
+
+REPRODUCIBILITY STATUS
+------------------------------------------------------------
+REVIEW REQUIRED
+The Git working tree contains uncommitted changes.
