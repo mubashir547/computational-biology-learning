@@ -1,0 +1,49 @@
+============================================================
+        EFFECTIVE SAMPLE SIZE ANALYSIS
+============================================================
+
+PURPOSE
+------------------------------------------------------------
+Effective sample size (ESS) estimates the number of approximately independent observations represented by a temporally correlated MD trajectory.
+
+METHOD
+------------------------------------------------------------
+Autocorrelation was calculated across trajectory frames. The integrated autocorrelation time was estimated using an initial-positive-sequence approach, and ESS was estimated as N/(2*tau).
+
+RESULTS
+------------------------------------------------------------
+
+rmsd_A
+Frames: 21
+Lag-1 autocorrelation: 0.6460
+Lag-2 autocorrelation: 0.4590
+Integrated autocorrelation time: 2.7674
+Effective sample size: 3.79
+Independent-frame fraction: 0.1807
+
+rg_A
+Frames: 21
+Lag-1 autocorrelation: 0.6512
+Lag-2 autocorrelation: 0.3662
+Integrated autocorrelation time: 1.8079
+Effective sample size: 5.81
+Independent-frame fraction: 0.2766
+
+hbonds
+Frames: 21
+Lag-1 autocorrelation: 0.7170
+Lag-2 autocorrelation: 0.4569
+Integrated autocorrelation time: 2.2933
+Effective sample size: 4.58
+Independent-frame fraction: 0.2180
+
+
+SCIENTIFIC INTERPRETATION
+------------------------------------------------------------
+MD trajectory frames are generally temporally correlated and therefore should not automatically be treated as independent statistical observations. ESS provides a more conservative estimate of the information content of the trajectory than the raw frame count.
+
+A substantially smaller ESS than the raw number of frames indicates strong temporal correlation. Statistical tests and confidence intervals based on the raw frame count should therefore be interpreted cautiously.
+
+IMPORTANT LIMITATION
+------------------------------------------------------------
+The present dataset contains only a limited number of trajectory frames. ESS estimates can therefore be unstable and should be interpreted as diagnostic rather than definitive. For production MD analysis, a much larger number of appropriately sampled frames is recommended.
