@@ -1,0 +1,51 @@
+============================================================
+        STATISTICAL MD CORRELATION ANALYSIS
+============================================================
+
+METHODS
+------------------------------------------------------------
+Pearson correlation was used to assess linear association.
+Spearman correlation was used to assess monotonic association.
+95% confidence intervals were estimated using bootstrap resampling.
+Bootstrap iterations: 5000
+
+PAIRWISE RESULTS
+------------------------------------------------------------
+
+rmsd_A vs rg_A
+n: 21
+Pearson r: 0.912
+Pearson p-value: 8.37218e-09
+Pearson 95% CI: 0.664 to 0.970
+Pearson interpretation: very strong positive association
+Spearman rho: 0.664
+Spearman p-value: 0.00104116
+Spearman 95% CI: 0.215 to 0.907
+
+rmsd_A vs hbonds
+n: 21
+Pearson r: 0.940
+Pearson p-value: 2.48944e-10
+Pearson 95% CI: 0.815 to 0.978
+Pearson interpretation: very strong positive association
+Spearman rho: 0.940
+Spearman p-value: 2.5896e-10
+Spearman 95% CI: 0.812 to 0.989
+
+rg_A vs hbonds
+n: 21
+Pearson r: 0.984
+Pearson p-value: 1.13219e-15
+Pearson 95% CI: 0.934 to 0.995
+Pearson interpretation: very strong positive association
+Spearman rho: 0.674
+Spearman p-value: 0.000800743
+Spearman 95% CI: 0.192 to 0.934
+
+SCIENTIFIC NOTE
+------------------------------------------------------------
+Correlation quantifies statistical association and does not establish causation. MD trajectory observations are also temporally correlated, so effective sample size and independence should be considered when interpreting p-values and confidence intervals.
+
+OUTPUT
+Results CSV: statistical_correlations.csv
+Report: statistical_correlation_report.txt
